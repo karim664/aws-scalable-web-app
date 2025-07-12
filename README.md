@@ -79,6 +79,14 @@ RDS Security Group
 3. Traffic is handled by **ALB** across **2 public subnets**
 4. **Auto Scaling Group (EC2 instances)** in **public subnets** process the form data
 5. PHP app connects to **RDS** in **private subnets** to store & fetch names
+6. **CloudWatch** monitors **EC2 instance** metrics (CPU usage)
+7. When thresholds are triggered, **SNS** sends email notifications to subscribed users
+   
+   **Instance Launch**
+   ![instance launch](./screenshots/SNS-Instance-Launch.png)
+
+   **Instance Termination**
+   ![tnstance termination](./screenshots/SNS-Instance-Termination.png)
 
 ---
 
