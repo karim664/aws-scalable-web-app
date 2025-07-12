@@ -1,7 +1,7 @@
 # 🚀 AWS Scalable Web App
 
 
-This project is a fully scalable web application hosted on AWS infrastructure using **EC2 Auto Scaling**, **Application Load Balancer (ALB)**, **RDS (MySQL)**, **ACM (SSL)**, and a custom domain integrated with **Route 53** and **GoDaddy DNS**.
+This project is a fully scalable web application hosted on AWS infrastructure using **EC2 Auto Scaling**, **Application Load Balancer (ALB)**, **RDS (MySQL)**, **ACM (SSL)**, and a custom domain integrated with **GoDaddy DNS**.
 
 ---
 
@@ -24,7 +24,7 @@ A basic PHP-based web app that:
 
 ## 📐 Architecture Components
 
-- **GoDaddy Domain + Route 53**: For DNS management
+- **GoDaddy Domain**: For DNS management
 - **ACM (AWS Certificate Manager)**: For free SSL certificate
 - **ALB (Application Load Balancer)**: For handling HTTP/HTTPS traffic
 - **Auto Scaling Group (EC2)**: Automatically scales based on CPU usage
@@ -75,7 +75,7 @@ RDS Security Group
 
 1. User visits the custom domain via HTTPS  
    ![site demo](./screenshots/Site-Demo.png)
-2. DNS is resolved through **GoDaddy** → **Route 53**
+2. DNS is resolved through **GoDaddy** 
 3. Traffic is handled by **ALB** across **2 public subnets**
 4. **Auto Scaling Group (EC2 instances)** in **public subnets** process the form data
 5. PHP app connects to **RDS** in **private subnets** to store & fetch names
@@ -99,7 +99,7 @@ RDS Security Group
 - HTML/CSS
 - Amazon EC2
 - Application Load Balancer (ALB)
-- Route 53 + GoDaddy DNS
+- GoDaddy DNS
 - ACM for SSL
 
 ---
